@@ -1,3 +1,4 @@
+
 G
 - [x] Få projektet att funka
 - [x] CSS till Sass
@@ -24,3 +25,4 @@ VG
 - [ ] Läs av utvecklingsmiljön
 - [ ] Enhetlig syntax i CSS:en
 - [ ] Publicera sidan på GitHub pages
+
