@@ -1,9 +1,17 @@
-import { createHtml } from "./src/js/createHtml";
-import { toggleLightMode } from "./src/js/toggleDarkmode";
+import './style.css';
+import {createHtml} from './src/js/createHtml';
 
-function init() {
-  toggleLightMode();
-  createHtml();
+function init (){
+
+
+
+toggleLightMode();
+    createHtml ();
+
 }
 
-init();
+init ();
+
+
+
+
