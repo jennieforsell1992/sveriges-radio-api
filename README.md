@@ -3,8 +3,8 @@ G
 - [x] Få projektet att funka
 - [x] CSS till Sass
 - [x] Enhetlig namngivning i CSS:en
-- [ ] Konvertera till TypeScript
-- [ ] Enhetlig kodkvalitet
+- [x] Konvertera till TypeScript
+- [x] Enhetlig kodkvalitet
 - [ ] Mobilvyn
 - [ ] Språk
 - [ ] Rensa loggning
