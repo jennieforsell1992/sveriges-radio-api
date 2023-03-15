@@ -1,0 +1,84 @@
+@use "mixins" as mix;
+@use "variables" as var;
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var.$color-primary;
+  background-color: var.$color-secondary;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.section__podlist-pods {
+  @include mix.phone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mix.desktop {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__article-innerarticle {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    margin-top: 0.5rem;
+  }
+
+  &__article-div {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 1rem;
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+    p {
+      font-size: 1rem;
+      margin: 0;
+    }
+    a {
+      color: var.$color-primary;
+      cursor: pointer;
+    }
+    a :active,
+    a:hover {
+      color: var.$color-hover;
+    }
+  }
+}
+
+.darkmode {
+  background-color: antiquewhite;
+  color: var.$color-secondary;
+}
+.darkmode {
+  a {
+    color: var.$color-secondary;
+  }
+  a:active {
+    color: var.$color-hover;
+  }
+  a:hover {
+    color: var.$color-hover;
+  }
+}
