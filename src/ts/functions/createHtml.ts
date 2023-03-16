@@ -1,4 +1,5 @@
 import { getPodcasts } from "../service/api";
+import { IProgram } from "../models/IProgram";
 
 const podCastContainer: HTMLElement = document.querySelector(
   ".section__podlist-pods"
@@ -8,7 +9,7 @@ let i = 0;
 
 export async function createHtml() {
   const podCasts = await getPodcasts();
-  podCasts.programs.forEach((podcast) => {
+  podCasts.programs.forEach((podcast: IProgram) => {
     i++;
     const innerArticle = createInnerArticle();
 
