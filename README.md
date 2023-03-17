@@ -34,6 +34,8 @@ VG
 
 # Badges
 
-![Parcel License](https://img.shields.io/badge/2.8.3-Parcel-green)
-![ESlint License](https://img.shields.io/badge/8.36.0-ESlint-blueviolet)
-![Typescript License](https://img.shields.io/badge/4.9.5-Typescript-blue)
+![(https://img.shields.io/badge/2.8.3-Parcel-green]
+![https://img.shields.io/badge/8.36.0-ESlint-blueviolet]
+![(https://img.shields.io/badge/4.9.5-Typescript-blue)]
+
+
