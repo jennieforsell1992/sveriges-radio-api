@@ -47,6 +47,7 @@ export async function createHtml() {
     function createImg() {
       const imgPlacement = document.createElement("IMG");
       imgPlacement.setAttribute("src", podcast.socialimage);
+      imgPlacement.setAttribute("alt", "omslagsbild på" + " " + podcast.name);
       imgPlacement.setAttribute("width", "100");
       imgPlacement.setAttribute("height", "100");
       innerArticle.appendChild(imgPlacement);
