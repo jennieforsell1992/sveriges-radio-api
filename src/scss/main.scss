@@ -32,7 +32,7 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  &__article-innerarticle {
+  .section__article-innerarticle {
     display: flex;
     flex-direction: row;
     margin-bottom: 2rem;
@@ -42,7 +42,7 @@ h1 {
     margin-top: 0.5rem;
   }
 
-  &__article-div {
+  .section__article-div {
     display: inline-flex;
     flex-direction: column;
     margin-top: 0;
