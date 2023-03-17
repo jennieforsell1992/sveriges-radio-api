@@ -33,6 +33,7 @@ VG
 ![skarmdumpSVT](https://user-images.githubusercontent.com/113438302/225849514-41cfad9d-46b7-4a08-a760-669f587d6978.png)
 
 # Badges
-[![Parcel License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![ESlint License](https://img.shields.io/badge/License-GPL%20v3-blueviolet.svg)](https://opensource.org/licenses/)
-[![Typescript License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
+[![Parcel License](https://img.shields.io/badge/2.8.3-Parcel-green)]
+[![ESlint License](https://img.shields.io/badge/8.36.0-ESlint-blueviolet)]
+[![Typescript License] (https://img.shields.io/badge/4.9.5-Typescript-blue)]
