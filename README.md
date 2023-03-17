@@ -47,31 +47,7 @@ Man kan även ta sig vidare till SR:s hemsida till den podd man väljer att lyss
 ```bash
  npm i 
 ```
-3. Om du inte har installerat något av parcel, ESlint och typescript. Gör såhär:
-
-## typescript
-skriv i terminalen: 
-```bash
-npm i -g typescript
-```
-och sedan:
-```bash
- tsc --init
-```
-
-## parcel
-skriv in i terminalen: 
-```bash
- npm i --save-dev parcel  
-```
-
-## ESlint 
-skriv in i terminalen:
-```bash
-npm init @eslint/config  
-```
-
-4. för att kunna se projektet i browsern, skriv in i terminalen:
+3. för att kunna se projektet i browsern, skriv in i terminalen:
 ```bash
   npx parcel index.html
 ```
