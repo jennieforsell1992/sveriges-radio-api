@@ -6,7 +6,6 @@ const podCastContainer: HTMLElement = document.querySelector(
 ) as HTMLElement;
 const innerArticle = document.createElement("article");
 const textDiv = document.createElement("div");
-let i = 0;
 
 function createInnerArticle() {
   innerArticle.setAttribute("class", "section__article-innerarticle");
