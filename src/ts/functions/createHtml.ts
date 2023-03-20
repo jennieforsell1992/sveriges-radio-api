@@ -54,13 +54,12 @@ function createHeader(podcast: IProgram) {
 export async function createHtml() {
   const podCasts = await getPodcasts();
   podCasts.programs.forEach((podcast: IProgram) => {
-    i++;
-    const innerArticle = createInnerArticle();
-    const textDiv = createTextDiv();
-    const imgPlacement = createImg(podcast);
-    const linkPlacement = createLink(podcast);
-    const headerPlacement = createHeader(podcast);
-    const descPlacement = createP(podcast);
+    createInnerArticle();
+    createTextDiv();
+    createImg(podcast);
+    createLink(podcast);
+    createHeader(podcast);
+    createP(podcast);
   });
 }
 
