@@ -10,7 +10,6 @@ let i = 0;
 
 function createInnerArticle() {
   innerArticle.setAttribute("class", "section__article-innerarticle");
-  innerArticle.setAttribute("tabindex", "1");
   podCastContainer.appendChild(innerArticle);
   return innerArticle;
 }
@@ -24,7 +23,6 @@ function createLink(podcast: IProgram) {
   const linkPlacement = document.createElement("a");
   const linkText = document.createTextNode("Lyssna här");
   linkPlacement.setAttribute("href", podcast.programurl);
-  linkPlacement.setAttribute("tabindex", "1");
   linkPlacement.appendChild(linkText);
   textDiv.appendChild(linkPlacement);
 }
