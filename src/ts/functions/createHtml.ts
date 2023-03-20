@@ -35,7 +35,7 @@ function createImg(podcast: IProgram) {
   innerArticle.appendChild(imgPlacement);
 }
 
-function createP(podcast: IProgram) {
+function createDesc(podcast: IProgram) {
   const descPlacement = document.createElement("p");
   const desc = document.createTextNode(podcast.description);
   descPlacement.appendChild(desc);
@@ -56,7 +56,7 @@ export async function createHtml() {
     createImg(podcast);
     createLink(podcast);
     createHeader(podcast);
-    createP(podcast);
+    createDesc(podcast);
   });
 }
 
