@@ -6,11 +6,11 @@ G
 - [x] Konvertera till TypeScript
 - [x] Enhetlig kodkvalitet
 - [x] Mobilvyn
-- [ ] Språk
-- [ ] Rensa loggning
-- [ ] Dokumentation
-- [ ] Tillgänglighet (bilder)
-- [ ] Refaktorera funktioner
+- [x] Språk
+- [x] Rensa loggning
+- [x] Dokumentation
+- [x] Tillgänglighet (bilder)
+- [x] Refaktorera funktioner
 - [ ] Eliminera onödig kod
 - [ ] Rensa bort kod som inte ska sättas
   
