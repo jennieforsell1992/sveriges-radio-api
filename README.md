@@ -31,7 +31,7 @@ En hemsida där man kan se vilka podcast SR:s har med genre humor.
 Man kan även ta sig vidare till SR:s hemsida till den podd man väljer att lyssna på. 
 
 # skärmdump 
-![skarmdumpSVT](https://user-images.githubusercontent.com/113438302/225862424-bcb2437a-90af-4680-8a05-7477cd4c690b.png)
+![skarmdumpSVT](https://user-images.githubusercontent.com/113438302/226600369-f4111c2a-a74d-4494-ba2f-dc190d04737a.png)
 
 
 # Badges

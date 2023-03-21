@@ -47,7 +47,6 @@ function createHeaderPodcast(podcast: IProgram) {
 }
 export async function createHtml() {
   const podCasts = await getPodcasts();
-  console.log(podCasts);
   podCasts.programs.forEach((podcast: IProgram) => {
     const innerArticlePodcast = createInnerArticlePodcast();
     podCastContainer.appendChild(innerArticlePodcast);
