@@ -57,7 +57,7 @@ h1 {
       margin: 0;
     }
     a {
-      color: var.$color-secondary;
+      color: var.$color-primary;
       cursor: pointer;
     }
     a :active,
@@ -70,13 +70,13 @@ h1 {
 .darkmode {
   background-color: antiquewhite;
   color: var.$color-secondary;
-  a {
-    color: var.$color-primary;
-  }
-  a:active {
-    color: var.$color-hover;
-  }
-  a:hover {
-    color: var.$color-hover;
+  .section__podlist-pods {
+    a {
+      color: var.$color-secondary;
+    }
+    a:active,
+    a:hover {
+      color: var.$color-hover;
+    }
   }
 }
