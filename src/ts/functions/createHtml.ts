@@ -1,62 +1,71 @@
 import { getPodcasts } from "../service/api";
-import { IProgram } from "../models/IProgram";
+import type { IProgram } from "../models/IProgram";
 
 const podCastContainer: HTMLElement = document.querySelector(
   ".section__podlist-pods"
 ) as HTMLElement;
-const innerArticle = document.createElement("article");
-const textDiv = document.createElement("div");
 
-function createInnerArticle() {
-  innerArticle.setAttribute("class", "section__article-innerarticle");
-  podCastContainer.appendChild(innerArticle);
-  return innerArticle;
+function createInnerArticlePodcast() {
+  const innerArticlePodcast = document.createElement("article");
+  innerArticlePodcast.setAttribute("class", "section__article-innerarticle");
+  return innerArticlePodcast;
 }
-function createTextDiv() {
-  textDiv.setAttribute("class", "section__article-div");
-  innerArticle.appendChild(textDiv);
-  return textDiv;
+function createImgPodcast(podcast: IProgram) {
+  const imgPodcast = document.createElement("IMG");
+  imgPodcast.setAttribute("src", podcast.socialimage);
+  imgPodcast.setAttribute("alt", "omslagsbild på" + " " + podcast.name);
+  imgPodcast.setAttribute("width", "100");
+  imgPodcast.setAttribute("height", "100");
+  return imgPodcast;
 }
-
-function createLink(podcast: IProgram) {
-  const linkPlacement = document.createElement("a");
-  const linkText = document.createTextNode("Lyssna här");
-  linkPlacement.setAttribute("href", podcast.programurl);
-  linkPlacement.appendChild(linkText);
-  textDiv.appendChild(linkPlacement);
+function createTextDivPodcast() {
+  const textDivPodcast = document.createElement("div");
+  textDivPodcast.setAttribute("class", "section__article-div");
+  return textDivPodcast;
 }
 
-function createImg(podcast: IProgram) {
-  const imgPlacement = document.createElement("IMG");
-  imgPlacement.setAttribute("src", podcast.socialimage);
-  imgPlacement.setAttribute("alt", "omslagsbild på" + " " + podcast.name);
-  imgPlacement.setAttribute("width", "100");
-  imgPlacement.setAttribute("height", "100");
-  innerArticle.appendChild(imgPlacement);
+function createLinkPodcast(podcast: IProgram) {
+  const linkPodcast = document.createElement("a");
+  const linkTextPodcast = document.createTextNode("Lyssna här");
+  linkPodcast.setAttribute("href", podcast.programurl);
+  linkPodcast.appendChild(linkTextPodcast);
+  return linkPodcast;
 }
 
-function createP(podcast: IProgram) {
-  const descPlacement = document.createElement("p");
-  const desc = document.createTextNode(podcast.description);
-  descPlacement.appendChild(desc);
-  textDiv.appendChild(descPlacement);
+function createDescPodcast(podcast: IProgram) {
+  const descPodcast = document.createElement("p");
+  const descText = document.createTextNode(podcast.description);
+  descPodcast.appendChild(descText);
+  return descPodcast;
 }
 
-function createHeader(podcast: IProgram) {
-  const headerPlacement = document.createElement("h2");
-  const programName = document.createTextNode(podcast.name);
-  headerPlacement.appendChild(programName);
-  textDiv.appendChild(headerPlacement);
+function createHeaderPodcast(podcast: IProgram) {
+  const headerPodcast = document.createElement("h2");
+  const podcastName = document.createTextNode(podcast.name);
+  headerPodcast.appendChild(podcastName);
+  return headerPodcast;
 }
 export async function createHtml() {
   const podCasts = await getPodcasts();
+  console.log(podCasts);
   podCasts.programs.forEach((podcast: IProgram) => {
-    createInnerArticle();
-    createTextDiv();
-    createImg(podcast);
-    createLink(podcast);
-    createHeader(podcast);
-    createP(podcast);
+    const innerArticlePodcast = createInnerArticlePodcast();
+    podCastContainer.appendChild(innerArticlePodcast);
+
+    const imgPodcast = createImgPodcast(podcast);
+    innerArticlePodcast.appendChild(imgPodcast);
+
+    const textDivPodcast = createTextDivPodcast();
+    innerArticlePodcast.appendChild(textDivPodcast);
+
+    const headerPodcast = createHeaderPodcast(podcast);
+    textDivPodcast.appendChild(headerPodcast);
+
+    const descPodcast = createDescPodcast(podcast);
+    textDivPodcast.appendChild(descPodcast);
+
+    const linkPodcast = createLinkPodcast(podcast);
+    textDivPodcast.appendChild(linkPodcast);
   });
 }
 

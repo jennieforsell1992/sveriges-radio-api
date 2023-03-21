@@ -67,18 +67,16 @@ h1 {
   }
 }
 
-.darkmode {
+.lightmode {
   background-color: antiquewhite;
   color: var.$color-secondary;
-}
-.darkmode {
-  a {
-    color: var.$color-secondary;
-  }
-  a:active {
-    color: var.$color-hover;
-  }
-  a:hover {
-    color: var.$color-hover;
+  .section__podlist-pods {
+    a {
+      color: var.$color-secondary;
+    }
+    a:active,
+    a:hover {
+      color: var.$color-hover;
+    }
   }
 }
