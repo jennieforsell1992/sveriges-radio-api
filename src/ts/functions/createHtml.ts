@@ -12,24 +12,22 @@ function createInnerArticle() {
   podCastContainer.appendChild(innerArticle);
   return innerArticle;
 }
-function createTextDiv() {
+function createTextDivPodcast() {
   textDiv.setAttribute("class", "section__article-div");
   innerArticle.appendChild(textDiv);
   return textDiv;
 }
 
-function createLink(podcast: IProgram) {
+function createLinkPodcast(podcast: IProgram) {
   const linkPodcast = document.createElement("a");
-  //ändra variabelnamn
   const linkText = document.createTextNode("Lyssna här");
   linkPodcast.setAttribute("href", podcast.programurl);
   linkPodcast.appendChild(linkText);
   textDiv.appendChild(linkPodcast);
 }
 
-function createImg(podcast: IProgram) {
+function createImgPodcast(podcast: IProgram) {
   const imgPodcast = document.createElement("IMG");
-  //ändra variabelnamn
   imgPodcast.setAttribute("src", podcast.socialimage);
   imgPodcast.setAttribute("alt", "omslagsbild på" + " " + podcast.name);
   imgPodcast.setAttribute("width", "100");
@@ -38,29 +36,29 @@ function createImg(podcast: IProgram) {
 }
 
 //ändra funktionsnamn
-function createDesc(podcast: IProgram) {
-  const descPlacement = document.createElement("p");
-  const desc = document.createTextNode(podcast.description);
-  descPlacement.appendChild(desc);
-  textDiv.appendChild(descPlacement);
+function createDescPodcast(podcast: IProgram) {
+  const descPodcast = document.createElement("p");
+  const descText = document.createTextNode(podcast.description);
+  descPodcast.appendChild(descText);
+  textDiv.appendChild(descPodcast);
 }
 
-function createHeader(podcast: IProgram) {
-  const headerPlacement = document.createElement("h2");
+function createHeaderPodcast(podcast: IProgram) {
+  const headerPodcast = document.createElement("h2");
   //ändra variabelnamn
   const programName = document.createTextNode(podcast.name);
-  headerPlacement.appendChild(programName);
-  textDiv.appendChild(headerPlacement);
+  headerPodcast.appendChild(programName);
+  textDiv.appendChild(headerPodcast);
 }
 export async function createHtml() {
   const podCasts = await getPodcasts();
   podCasts.programs.forEach((podcast: IProgram) => {
     createInnerArticle();
-    createTextDiv();
-    createImg(podcast);
-    createLink(podcast);
-    createHeader(podcast);
-    createDesc(podcast);
+    createTextDivPodcast();
+    createImgPodcast(podcast);
+    createLinkPodcast(podcast);
+    createHeaderPodcast(podcast);
+    createDescPodcast(podcast);
   });
 }
 
