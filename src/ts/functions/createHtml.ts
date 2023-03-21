@@ -6,9 +6,9 @@ const podCastContainer: HTMLElement = document.querySelector(
 ) as HTMLElement;
 
 function createInnerArticlePodcast() {
-  const innerArticle = document.createElement("article");
-  innerArticle.setAttribute("class", "section__article-innerarticle");
-  return innerArticle;
+  const innerArticlePodcast = document.createElement("article");
+  innerArticlePodcast.setAttribute("class", "section__article-innerarticle");
+  return innerArticlePodcast;
 }
 function createImgPodcast(podcast: IProgram) {
   const imgPodcast = document.createElement("IMG");
@@ -49,14 +49,14 @@ export async function createHtml() {
   const podCasts = await getPodcasts();
   console.log(podCasts);
   podCasts.programs.forEach((podcast: IProgram) => {
-    const innerArticle = createInnerArticlePodcast();
-    podCastContainer.appendChild(innerArticle);
+    const innerArticlePodcast = createInnerArticlePodcast();
+    podCastContainer.appendChild(innerArticlePodcast);
 
     const imgPodcast = createImgPodcast(podcast);
-    innerArticle.appendChild(imgPodcast);
+    innerArticlePodcast.appendChild(imgPodcast);
 
     const textDivPodcast = createTextDivPodcast();
-    innerArticle.appendChild(textDivPodcast);
+    innerArticlePodcast.appendChild(textDivPodcast);
 
     const headerPodcast = createHeaderPodcast(podcast);
     textDivPodcast.appendChild(headerPodcast);
