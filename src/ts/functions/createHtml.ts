@@ -19,22 +19,25 @@ function createTextDiv() {
 }
 
 function createLink(podcast: IProgram) {
-  const linkPlacement = document.createElement("a");
+  const linkPodcast = document.createElement("a");
+  //ändra variabelnamn
   const linkText = document.createTextNode("Lyssna här");
-  linkPlacement.setAttribute("href", podcast.programurl);
-  linkPlacement.appendChild(linkText);
-  textDiv.appendChild(linkPlacement);
+  linkPodcast.setAttribute("href", podcast.programurl);
+  linkPodcast.appendChild(linkText);
+  textDiv.appendChild(linkPodcast);
 }
 
 function createImg(podcast: IProgram) {
-  const imgPlacement = document.createElement("IMG");
-  imgPlacement.setAttribute("src", podcast.socialimage);
-  imgPlacement.setAttribute("alt", "omslagsbild på" + " " + podcast.name);
-  imgPlacement.setAttribute("width", "100");
-  imgPlacement.setAttribute("height", "100");
-  innerArticle.appendChild(imgPlacement);
+  const imgPodcast = document.createElement("IMG");
+  //ändra variabelnamn
+  imgPodcast.setAttribute("src", podcast.socialimage);
+  imgPodcast.setAttribute("alt", "omslagsbild på" + " " + podcast.name);
+  imgPodcast.setAttribute("width", "100");
+  imgPodcast.setAttribute("height", "100");
+  innerArticle.appendChild(imgPodcast);
 }
 
+//ändra funktionsnamn
 function createDesc(podcast: IProgram) {
   const descPlacement = document.createElement("p");
   const desc = document.createTextNode(podcast.description);
@@ -44,6 +47,7 @@ function createDesc(podcast: IProgram) {
 
 function createHeader(podcast: IProgram) {
   const headerPlacement = document.createElement("h2");
+  //ändra variabelnamn
   const programName = document.createTextNode(podcast.name);
   headerPlacement.appendChild(programName);
   textDiv.appendChild(headerPlacement);
