@@ -1,5 +1,5 @@
 import { createHtml } from "./functions/createHtml";
-import { toggleLightMode } from "./functions/toggleDarkmode";
+import { toggleLightMode } from "./functions/toggleLightmode";
 
 function init(): void {
   toggleLightMode();
