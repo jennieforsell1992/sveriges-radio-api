@@ -19,16 +19,16 @@ function createImgPodcast(podcast: IProgram) {
   return imgPodcast;
 }
 function createTextDivPodcast() {
-  const textDiv = document.createElement("div");
-  textDiv.setAttribute("class", "section__article-div");
-  return textDiv;
+  const textDivPodcast = document.createElement("div");
+  textDivPodcast.setAttribute("class", "section__article-div");
+  return textDivPodcast;
 }
 
 function createLinkPodcast(podcast: IProgram) {
   const linkPodcast = document.createElement("a");
-  const linkText = document.createTextNode("Lyssna här");
+  const linkTextPodcast = document.createTextNode("Lyssna här");
   linkPodcast.setAttribute("href", podcast.programurl);
-  linkPodcast.appendChild(linkText);
+  linkPodcast.appendChild(linkTextPodcast);
   return linkPodcast;
 }
 
@@ -55,17 +55,17 @@ export async function createHtml() {
     const imgPodcast = createImgPodcast(podcast);
     innerArticle.appendChild(imgPodcast);
 
-    const textDiv = createTextDivPodcast();
-    innerArticle.appendChild(textDiv);
+    const textDivPodcast = createTextDivPodcast();
+    innerArticle.appendChild(textDivPodcast);
 
     const headerPodcast = createHeaderPodcast(podcast);
-    textDiv.appendChild(headerPodcast);
+    textDivPodcast.appendChild(headerPodcast);
 
     const descPodcast = createDescPodcast(podcast);
-    textDiv.appendChild(descPodcast);
+    textDivPodcast.appendChild(descPodcast);
 
     const linkPodcast = createLinkPodcast(podcast);
-    textDiv.appendChild(linkPodcast);
+    textDivPodcast.appendChild(linkPodcast);
   });
 }
 
