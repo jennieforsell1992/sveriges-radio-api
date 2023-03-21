@@ -57,7 +57,7 @@ h1 {
       margin: 0;
     }
     a {
-      color: var.$color-primary;
+      color: var.$color-secondary;
       cursor: pointer;
     }
     a :active,
@@ -70,10 +70,8 @@ h1 {
 .darkmode {
   background-color: antiquewhite;
   color: var.$color-secondary;
-}
-.darkmode {
   a {
-    color: var.$color-secondary;
+    color: var.$color-primary;
   }
   a:active {
     color: var.$color-hover;
